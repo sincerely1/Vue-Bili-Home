@@ -1,0 +1,6 @@
+/* 自定义重置样式 */
+@import './base.css';
+@import './bilifont.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
