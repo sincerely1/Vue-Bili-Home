@@ -23,14 +23,7 @@
 
 <script lang="ts" setup>
 
-const props = defineProps({
-  mainData: {
-    type: Array,
-    default() {
-      return []
-    }
-  }
-})
+const props = defineProps(['mainData'])
 
 // 点击跳转
 const jumpPath = (keyword: string) => {

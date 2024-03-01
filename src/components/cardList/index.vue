@@ -55,18 +55,7 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
-  mainData: {
-    type: Array,
-    default() {
-      return []
-    }
-  },
-  mainName: {
-    type: String,
-    default: ''
-  }
-})
+const props = defineProps(['mainData','mainName'])
 
 // 计算数量过万就转换
 const tenThousand = (count: number) => {
@@ -79,19 +68,19 @@ const tenThousand = (count: number) => {
 // 处理时间
 const timeHandle = (time: number) => {
   let timeFormat = ''
-  function allTime(time: number) {
+  function allTime(time: any) {
     if (time < 60) {
       let s = time > 0 ? time : ''
       s = s <= 10 ? '0' + s : s
       timeFormat = timeFormat + s
       return
     } else if (time < 3600) {
-      let m = Math.floor(time / 60)
+      let m:any = Math.floor(time / 60)
       m = m <= 10 ? '0' + m : m
       timeFormat = timeFormat + m + ':'
       allTime(time - m * 60)
     } else {
-      let h = Math.floor(time / 3600)
+      let h:any = Math.floor(time / 3600)
       h = h <= 10 ? '0' + h : h
       timeFormat = timeFormat + h + ':'
       allTime(time - h * 3600)

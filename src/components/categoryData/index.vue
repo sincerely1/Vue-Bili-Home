@@ -21,7 +21,7 @@ import animation8 from '@/assets/image/animation8.avif'
 import animation9 from '@/assets/image/animation9.avif'
 import animation10 from '@/assets/image/animation10.avif'
 
-const animationList = [
+const animationList= [
   {
     id: 1,
     title: '宝藏没了!',
