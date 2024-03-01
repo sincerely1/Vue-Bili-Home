@@ -4,18 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "dev": "node server",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.js --outDir dist/server",
+    "preview": "cross-env NODE_ENV=production node server"
   },
   "dependencies": {
-    "axios": "^1.6.7",
-    "bootstrap-icons": "^1.11.3",
+    "@duannx/vue-client-only": "^1.0.3",
     "element-plus": "^2.5.6",
+    "express": "^4.18.3",
+    "pinia": "^2.1.7",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },

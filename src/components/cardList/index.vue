@@ -63,8 +63,7 @@ const props = defineProps({
     }
   },
   mainName: {
-    type: String,
-    default: ''
+    type: Object,
   }
 })
 
