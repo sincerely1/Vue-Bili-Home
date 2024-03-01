@@ -430,7 +430,7 @@
       </div>
       <div class="cursor-pointer text-sm text-white">创作中心</div>
       <div class="cursor-pointer text-sm text-white upload">
-        <el-button color="#ec81a7" style="color=white">投稿</el-button>
+        <el-button style="background-color:#ec81a7;border:none">投稿</el-button>
       </div>
     </div>
   </div>
